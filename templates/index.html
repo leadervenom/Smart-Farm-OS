@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Smart Farm OS</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <main class="phone-shell">
+    <section class="topbar">
+      <div>
+        <p class="eyebrow">SECURE HYDROPONIC DIGITAL TWIN</p>
+        <h1>Smart Farm OS</h1>
+      </div>
+      <div class="status-pill" id="systemLock">AUTO</div>
+    </section>
+
+    <section class="screen active" id="dashboardScreen">
+      <div class="hero-card scanline">
+        <div class="hero-left">
+          <span class="label">System Health Score</span>
+          <div class="health-score-line"><strong id="healthScore">--</strong><span id="healthVerdict" class="health-verdict">--</span></div>
+          <p id="plantState">Waiting for telemetry...</p>
+        </div>
+        <button class="primary-btn" id="runAiBtn">AI Optimize System</button>
+      </div>
+
+      <div class="metric-grid" id="metricGrid"></div>
+
+      <div class="section-header">
+        <div>
+          <h2>Digital Twin</h2>
+          <p>Tap rack or level to inspect live state.</p>
+        </div>
+        <button class="ghost-btn" data-nav="alertsScreen">Alerts</button>
+      </div>
+
+      <div class="rack-stage" id="rackStage"></div>
+
+      <div class="ai-card" id="aiPlanCard">
+        <span class="label">AI Summary Planner</span>
+        <p>No optimization plan generated yet.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="twinScreen">
+      <div class="section-header compact">
+        <button class="back-btn" data-nav="dashboardScreen">←</button>
+        <div>
+          <h2 id="twinTitle">Expanded Rack</h2>
+          <p>2D rack inspection, plant slots, alerts.</p>
+        </div>
+      </div>
+      <div class="expanded-rack-card">
+        <div class="rack-art-wrap">
+          <img src="/static/img/rack_art.svg" alt="Rack digital twin" class="rack-art" />
+          <div class="rack-hotspots" id="rackHotspots"></div>
+        </div>
+        <div class="slot-panel" id="slotPanel">Select a rack level.</div>
+      </div>
+    </section>
+
+    <section class="screen" id="alertsScreen">
+      <div class="section-header compact">
+        <div>
+          <h2>Predictive Alerts</h2>
+          <p>One forecast pass. Run again after control changes.</p>
+        </div>
+      </div>
+      <div class="manual-card prediction-card">
+        <h3>Prediction Scanner</h3>
+        <p>This does not loop. Press once to forecast the next risk window from the current CSV telemetry and rack settings.</p>
+        <div class="button-row between">
+          <button class="primary-btn" id="runPredictionBtn">Run Prediction Scan</button>
+          <span class="scan-stamp" id="scanStamp">No scan run yet</span>
+        </div>
+      </div>
+      <div id="alertList" class="alert-list"></div>
+    </section>
+
+    <section class="screen" id="microScreen">
+      <div class="section-header compact">
+        <div>
+          <h2>Climate Twin</h2>
+          <p>Rack-level multivariable control: detect issue → check conflicts → optimize rack.</p>
+        </div>
+      </div>
+      <div class="climate-twin-grid" id="climateTwinGrid"></div>
+      <div class="manual-card rack-control-panel" id="rackControlPanel">
+        <h3>Select a rack</h3>
+        <p>Rack controls will appear here.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="docsScreen">
+      <div class="section-header compact">
+        <div>
+          <h2>Documentation</h2>
+          <p>Monitoring → analysis → decision → automation → documentation.</p>
+        </div>
+      </div>
+      <div class="timeline" id="eventLog"></div>
+      <div class="info-card">
+        <h3>Backend API Key Placement</h3>
+        <p>Gemini key is read only by Python backend from <code>.env</code> or environment variable. It never appears in browser code.</p>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="active" data-nav="dashboardScreen">Dashboard</button>
+      <button data-nav="alertsScreen">Alerts</button>
+      <button data-nav="microScreen">Climate</button>
+      <button data-nav="docsScreen">Docs</button>
+    </nav>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/static/js/core/state.js"></script>
+  <script src="/static/js/core/navigation.js"></script>
+  <script src="/static/js/features/dashboard.js"></script>
+  <script src="/static/js/features/twin.js"></script>
+  <script src="/static/js/features/alerts.js"></script>
+  <script src="/static/js/features/climate.js"></script>
+  <script src="/static/js/features/docs.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

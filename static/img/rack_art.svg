@@ -1,0 +1,34 @@
+<svg width="760" height="980" viewBox="0 0 760 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="980" rx="42" fill="#030806"/>
+  <defs>
+    <filter id="softGlow" x="40" y="35" width="680" height="910" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#17f79a" flood-opacity="0.32"/>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#0e3329" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect x="46" y="40" width="668" height="900" fill="url(#grid)" opacity=".55"/>
+  <g filter="url(#softGlow)">
+    <rect x="100" y="80" width="560" height="820" rx="26" fill="#061712" stroke="#2a735c" stroke-width="7"/>
+    <path d="M156 84V896M604 84V896" stroke="#286e59" stroke-width="7" opacity=".85"/>
+    <path d="M104 112H656M104 868H656" stroke="#286e59" stroke-width="7" opacity=".85"/>
+    <g stroke="#18f29a" stroke-width="4" fill="#09271f">
+      <rect x="140" y="140" width="480" height="132" rx="18"/>
+      <rect x="140" y="328" width="480" height="132" rx="18"/>
+      <rect x="140" y="516" width="480" height="132" rx="18"/>
+      <rect x="140" y="704" width="480" height="132" rx="18"/>
+    </g>
+    <g opacity=".72">
+      <g fill="#13f49a">
+        <rect x="206" y="191" width="64" height="28" rx="14"/><rect x="348" y="191" width="64" height="28" rx="14"/><rect x="490" y="191" width="64" height="28" rx="14"/>
+        <rect x="206" y="379" width="64" height="28" rx="14"/><rect x="348" y="379" width="64" height="28" rx="14"/><rect x="490" y="379" width="64" height="28" rx="14"/>
+        <rect x="206" y="567" width="64" height="28" rx="14"/><rect x="348" y="567" width="64" height="28" rx="14"/><rect x="490" y="567" width="64" height="28" rx="14"/>
+        <rect x="206" y="755" width="64" height="28" rx="14"/><rect x="348" y="755" width="64" height="28" rx="14"/><rect x="490" y="755" width="64" height="28" rx="14"/>
+      </g>
+      <g stroke="#0a1410" stroke-width="3" opacity=".75">
+        <path d="M206 205H270M348 205H412M490 205H554M206 393H270M348 393H412M490 393H554M206 581H270M348 581H412M490 581H554M206 769H270M348 769H412M490 769H554"/>
+      </g>
+    </g>
+  </g>
+</svg>

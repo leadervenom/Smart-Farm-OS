@@ -1,0 +1,8 @@
+{
+  "name": "Smart Farm OS",
+  "short_name": "FarmOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06110e",
+  "theme_color": "#12e28b"
+}

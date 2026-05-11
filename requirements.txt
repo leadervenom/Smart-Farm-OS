@@ -1,0 +1,2 @@
+# Optional: install this only when you want Gemini-backed AI optimization.
+google-genai==1.48.0
